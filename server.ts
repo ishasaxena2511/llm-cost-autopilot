@@ -8,7 +8,7 @@ import { analyzeComplexity } from './server/complexity.js';
 import { getProviderForModel } from './server/providers.js';
 import { ModelConfig } from './src/types/index.js';
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 async function startServer() {
   const app = express();
